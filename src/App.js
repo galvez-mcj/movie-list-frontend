@@ -30,8 +30,9 @@ function App() {
     try {
       const response = await api.get(`/api/v1/movies/${movieId}`);
       const oneMovie = response.data;
+      console.log(oneMovie);
       setMovie(oneMovie);
-      setReviews(oneMovie.reviews);
+      setReviews(oneMovie.reviewIds);
     } catch(err) {
       console.log(err);
     }
