@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import Trailer from './components/Trailer';
+import Watchlist from './components/Watchlist';
 
 function App() {
   const [movies, setMovies] = useState();
@@ -27,12 +28,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header/>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home movies={movies}/>} />
-          <Route path="/Trailer/:ytTrailerId" element={<Trailer />} />
-        </Route>
+          <Route path="/" element={<Layout/>}>
+            <Route path="/" element={<Home movies={movies} />} ></Route>
+            <Route path="/watchlist" element={<Watchlist />}></Route>
+            <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
+          </Route>
       </Routes>
     </div>
   );
