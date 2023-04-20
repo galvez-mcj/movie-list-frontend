@@ -7,9 +7,12 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Trailer from './components/Trailer';
 import Watchlist from './components/Watchlist';
+import Reviews from './components/Reviews';
 
 function App() {
   const [movies, setMovies] = useState();
+  const [movie, setMovie] = useState();
+  const [reviews, setReviews] = useState();
   
   const getMovies = async () => {
 
@@ -17,6 +20,18 @@ function App() {
       const response = await api.get("/api/v1/movies");
       console.log(response.data);
       setMovies(response.data);
+    } catch(err) {
+      console.log(err);
+    }
+  }
+
+  const getMovieData = async (movieId) => {
+
+    try {
+      const response = await api.get(`/api/v1/movies/${movieId}`);
+      const oneMovie = response.data;
+      setMovie(oneMovie);
+      setReviews(oneMovie.reviews);
     } catch(err) {
       console.log(err);
     }
@@ -34,6 +49,8 @@ function App() {
             <Route path="/" element={<Home movies={movies} />} ></Route>
             <Route path="/watchlist" element={<Watchlist />}></Route>
             <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
+            <Route path="/Reviews/:movieId" element ={<Reviews getMovieData = {getMovieData} movie={movie} reviews ={reviews} setReviews = {setReviews} />}></Route>
+            
           </Route>
       </Routes>
     </div>
