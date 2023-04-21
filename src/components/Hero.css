@@ -45,12 +45,11 @@
     font-family: var(--display-font);
 }
 
-.movie-button-container{
+.button-container{
     display:flex;
     align-items: center;
-    width: 125px;
-    background-color: var(--primary);
-    border-radius: 999px;
+    justify-content: center;
+    width: 100%;
 }
 /* 
 .play-button-icon-container{

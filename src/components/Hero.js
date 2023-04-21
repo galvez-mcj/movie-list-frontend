@@ -29,18 +29,17 @@ const Hero = ({movies}) => {
                                         </div>
                                         <div className="movie-title">
                                             <h4>{movie.title}</h4>
-                                            <div className="movie-button-container">
-                                                <Link to={`/Trailer/${movie.trailerLink.substring(movie.trailerLink.length - 11)}`}>
-                                                {/* <Link to={`/Trailer`}> */}
+                                            <div className="button-container">
+                                                <Button variant='danger' href={`/Trailer/${movie.trailerLink.substring(movie.trailerLink.length - 11)}`} target="_blank">
                                                     <FontAwesomeIcon 
                                                         className="play-button-icon"
-                                                        icon={faCirclePlay}/>
-                                                    Play trailer
-                                                </Link>
+                                                        icon={faCirclePlay}
+                                                        />
+                                                    Play Trailer
+                                                </Button>
                                             </div>
-                                            <div className='movie-button-container'>
-                                                <Button variant='info' onClick={() => reviews(movie.imdbId)}></Button>
-                                                See Reviews
+                                            <div className='button-container'>
+                                                <Button variant='danger' onClick={() => reviews(movie.imdbId)}>See Reviews</Button>
                                             </div>
                                         </div>
                                         
