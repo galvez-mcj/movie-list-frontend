@@ -1,6 +1,11 @@
 <h1>movie-list-frontend</h1>
 The client interface for the movie list application made using React
 
+Site Preview:
+![image](https://user-images.githubusercontent.com/123865026/233638981-222a350e-a7a5-403f-9fa0-902c452015aa.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
