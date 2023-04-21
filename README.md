@@ -1,9 +1,13 @@
 <h1>movie-list-frontend</h1>
 The client interface for the movie list application made using React
 
+
 Site Preview:
+
 ![image](https://user-images.githubusercontent.com/123865026/233638981-222a350e-a7a5-403f-9fa0-902c452015aa.png)
 
+
+Backend powered by Spring Boot and MongoDB: https://github.com/galvez-mcj/movie-list-backend
 
 
 # Getting Started with Create React App
